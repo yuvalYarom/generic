@@ -24,6 +24,7 @@ for j,i in enumerate(df['ja3s']):
         except HTTPError:
             print("reset")
             time.sleep(60)
+            t = reverse_md5(i)
         print(j)
         if t != "Provided MD5 hash could not be reversed into a string: no reverse string was found.":
             print(t)
